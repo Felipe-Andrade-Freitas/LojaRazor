@@ -17,7 +17,7 @@ namespace LojaRazor.Models
         [Required, MinLength(3)]
         public String Senha { get; set; }
 
-        [Required]
+        [Required, DisplayFormat(DataFormatString ="{0:d}", ApplyFormatInEditMode =false)]
         public DateTime DataDeNascimento { get; set; }
 
         [Required]
@@ -31,5 +31,11 @@ namespace LojaRazor.Models
         public string Observacoes { get; set; }
 
         public bool RecebePromocoes { get; set; }
+
+        [Required]
+        public Sexo Sexo { get; set; }
+
+        [Required]
+        public Estado Estado { get; set; }
     }
 }
